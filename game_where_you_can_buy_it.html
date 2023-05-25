@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Проигрыватель видео</title>
+ <style>
+  #video-player {
+   width: 640px;
+   height: 360px;
+   background-color: #000;
+   position: relative;
+  }
+  #video-player video {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+  }
+  #video-list {
+   margin-top: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  #video-list label {
+   font-size: 16px;
+   margin-right: 10px;
+  }
+  #video-list select {
+   padding: 5px;
+   font-size: 16px;
+   border-radius: 5px;
+   border: none;
+   background-color: #f2f2f2;
+   cursor: pointer;
+  }
+  #video-info {
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+  }
+  #video-info img {
+   width: 100px;
+   height: 100px;
+   margin-right: 20px;
+  }
+  #video-info p {
+   font-size: 16px;
+   margin: 0;
+  }
+ </style>
+</head>
+<body>
+ <div id="video-player">
+  <video autoplay controls>
+   <source src="video1.mp4" type="video/mp4">
+   <source src="video1.webm" type="video/webm">
+   Your browser does not support the video tag.
+  </video>
+ </div>
+ <div id="video-list">
+  <label for="videos">Просмотрите видео, чтобы лучше понять, что из себя представляет игра:</label>
+  <select id="videos" onchange="playVideo()">
+   <option value="video1.mp4">Видео 1</option>
+   <option value="video2.mp4">Видео 2</option>
+   <option value="video3.mp4">Видео 3</option>
+  </select>
+ </div>
+ <div id="video-info">
+  <img src="thumbnail1.jpg" alt="Thumbnail">
+  <p>Описание видео 1</p>
+ </div>
+ <script>
+  function playVideo() {
+   var videoPlayer = document.querySelector("#video-player video");
+   var videoList = document.querySelector("#videos");
+   videoPlayer.src = videoList.value;
+   videoPlayer.play();
+   
+   var thumbnail = document.querySelector("#video-info img");
+   var description = document.querySelector("#video-info p");
+   if (videoList.value === "video1.mp4") {
+    thumbnail.src = "thumbnail1.jpg";
+    description.textContent = "Описание видео 1";
+   } else if (videoList.value === "video2.mp4") {
+    thumbnail.src = "thumbnail2.jpg";
+    description.textContent = "Описание видео 2";
+   } else if (videoList.value === "video3.mp4") {
+    thumbnail.src = "thumbnail3.jpg";
+    description.textContent = "Описание видео 3";
+   }
+  }
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+

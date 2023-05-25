@@ -1,0 +1,26 @@
+#cart {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  #cart h2 {
+    margin-top: 0;
+  }
+  
+  #cart-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  #cart-total {
+    font-weight: bold;
+    margin-top: 10px;
+  }

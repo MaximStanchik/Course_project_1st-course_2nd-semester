@@ -1,0 +1,121 @@
+/* Навигационное меню: */
+body {
+    margin: 0;
+    padding: 0;
+   }
+   .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 500px; ;
+    background-color: #272d30;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .menu-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+   }
+   .menu-container a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+   }
+   
+   @media (max-width: 768px) {
+     .menu-container {
+       display: none;
+     }
+   }
+   
+   @media (max-width: 145%) {
+     .menu-container {
+       display: none;
+     }
+   }
+
+/*Каталог:*/
+
+.catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 700px;
+   }
+   .catalog-block {
+    width: 500px;
+    height: 270px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+   }
+   .catalog-block img {
+    float:left;
+    max-width: 100%;
+    max-height: 70%;
+   }
+   .catalog-block h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+   }
+   .catalog-block p {
+    font-size: 16px;
+    line-height: 1.5;
+   }
+   .catalog-block__buy-button {
+    background-color: #272d30;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+   }
+
+   .pre_color{
+    background-color: lightgreen;
+   }
+
+   .cart-icon {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     width: 50px;
+     height: 50px;
+     background-image: url('cart.png');
+     background-size: cover;
+     cursor: pointer;
+     z-index: 10;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size:18px;
+     color: #fff;
+   }
+   
+   .cart-count {
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 20px;
+     height: 20px;
+     background-color: #272d30;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 12px;
+     color: #fff;
+   }
